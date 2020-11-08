@@ -1,59 +1,67 @@
 var choice = ["Rock", "Paper", "Scissors"];  
 choice.forEach(Function1);
-function Function1(){
+function Function1(item){
 var btn = document.createElement("BUTTON");   
-btn.innerHTML = "index";                                
-document.getElementById("div1").appendChild(btn);
+btn.classList.add("player_choice");                                
+document.getElementById("div1").appendChild(btn).textContent +=  item ;
 }
-var player = prompt("Let's GOoOOOoOo");
-if (! player) {
+let playerChoice ="";
+// console.log(playerChoice);
+ const choicesButton=document.querySelectorAll(".player_choice");
+ console.log(choicesButton);
+ choicesButton.forEach(button=>{
+    button.addEventListener("click",function(){
+    document.getElementsByClassName("player")[0].innerHTML="";
+    playerChoice=button.textContent;
+    console.log(playerChoice);
+    document.getElementsByClassName("player")[0].textContent += playerChoice ;
     
-    document.alret("should chose one of these optiones  " );
-} else {
-    
-    document.write("<p> player choice:" + " " + player+ "</p>" );
-}
-function computerChoice (){
-var computer= choice[Math.floor(Math.random() * choice.length)];
+     })
+ })
+ 
+function Winner(player){
 
-        // Display computer choice
-        document.write("<p>Computer choice:" + " " + computer+ "</p>");
-}
-var win = function(computerChoice,player){
+    let computer= choice[Math.floor(Math.random() * choice.length)];
+    
+
+    
     if (computer === player) {
-        return "It's a tie!";
+       alert ("It's a tie!");
     }
-    if (computer === "rock") {
-        if (player === "scissors") {
-            // rock wins
-            return "You win!";
+    else if (computer === "Rock") {
+        if (player === "Scissors") {
+            
+            alert ("you lose 😴!");
+    
         } else {
-            // paper wins
-            return "You lose! Try again.";
+
+            alert ("You win 💪!");
+            alert ("It's a tie!");
         }
     }
-    if (computer === "paper") {
-        if (player === "rock") {
-            // paper wins
-            return "You win!";
+    if (computer === "Paper") {
+        if (player === "Rock") {
+            
+            alert ("You win 💪!");
         } else {
-            // scissors wins
-            return "You lose! Try again.";
+            alert ("you lose 😴!");
         }
     }
-    if (computer === "scissors") {
-        if (player === "rock") {
-            // rock wins
-            return "You lose! Try again.";
+    if (computer === "Scissors") {
+        if (player === "Rock") {
+        
+            alert ("You win 💪!");
+            
         } else {
-            // scissors wins
-            return "You win!";
+            
+           alert ("you lose 😴!");
         }
     }
-};
+}
+const play = document.getElementById("start");
+console.log(play);
+ play.addEventListener("click",function(){
+    Winner(playerChoice);
+    
 
-
-var results = compare(computer,player);
-
-
-document.write(win);
+ });
