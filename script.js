@@ -1,3 +1,4 @@
+
 var choice = ["Rock", "Paper", "Scissors"];  
 choice.forEach(Function1);
 function Function1(item){
@@ -71,3 +72,4 @@ const play = document.getElementById("start");
     console.log(Winner(playerChoice));
 
  });
+

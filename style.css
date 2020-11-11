@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     padding: 0;
@@ -47,7 +48,16 @@
     margin-top: 50px;
     font-size: 35px;
     border-radius: 50px;
+
+}
+.computer {
+    color:purple;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 35px;
+    border-radius: 50px;
     font-weight: 600;
+
 }
 #start{
     
@@ -55,7 +65,7 @@
     padding-right: 50px;
     border-radius: 50px;
     font-size: 35px;
-    
+
     
 }
 
@@ -87,4 +97,4 @@
         align-items: center;
     }
 
-}
+  }
