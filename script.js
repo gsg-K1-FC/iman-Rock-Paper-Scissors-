@@ -6,7 +6,6 @@ btn.classList.add("player_choice");
 document.getElementById("div1").appendChild(btn).textContent +=  item ;
 }
 let playerChoice ="";
-// console.log(playerChoice);
  const choicesButton=document.querySelectorAll(".player_choice");
  console.log(choicesButton);
  choicesButton.forEach(button=>{
@@ -20,48 +19,55 @@ let playerChoice ="";
  })
  
 function Winner(player){
-
     let computer= choice[Math.floor(Math.random() * choice.length)];
+    document.getElementsByClassName('computer')[0].innerHTML = computer;
+    let H1 = document.createElement('H1');
+    let resultt =document.getElementById('resultt');
+    resultt.appendChild(H1);
     
 
-    
+    if (!player) {
+        alert('you should choose!');
+        return;
+      }
+     
     if (computer === player) {
-       alert ("It's a tie!");
+        resultt.innerHTML="It's a tie!";
+       return;
     }
     else if (computer === "Rock") {
         if (player === "Scissors") {
             
-            alert ("you lose 😴!");
+           resultt.innerHTML= "you lose 😴!";
     
         } else {
 
-            alert ("You win 💪!");
-            alert ("It's a tie!");
+            resultt.innerHTML="You win 💪!";
+            
         }
     }
     if (computer === "Paper") {
         if (player === "Rock") {
             
-            alert ("You win 💪!");
+            resultt.innerHTML= "You lose 😴!";
         } else {
-            alert ("you lose 😴!");
+            resultt.innerHTML="you win 💪!";
         }
     }
     if (computer === "Scissors") {
         if (player === "Rock") {
         
-            alert ("You win 💪!");
+            resultt.innerHTML="you win 💪!";
             
         } else {
             
-           alert ("you lose 😴!");
+            resultt.innerHTML= "You lose 😴!";
         }
     }
 }
 const play = document.getElementById("start");
-console.log(play);
  play.addEventListener("click",function(){
     Winner(playerChoice);
-    
+    console.log(Winner(playerChoice));
 
  });
