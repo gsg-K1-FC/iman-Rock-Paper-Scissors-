@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color:ivory;
+}
+
+
+
+#div1{
+    background-color: lightcoral;
+    justify-content: space-between;
+    margin-top: 100px;
+    text-align: center;
+    font-size: 35px;
+
+    border-color: dimgrey;
+    border-radius: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    width: 100%;
+
+}
+
+.player{
+    
+    text-align: center;
+    margin-top: 100px;
+    font-size: 35px;
+    
+    font-weight: 600; 
+
+}
+
+.Players_Choice {
+
+    color: purple;
+    /* background-color:lightcoral; */
+    text-align: center;
+    margin-top: 100px;
+    font-size: 35px;
+    border-radius: 50px;
+}
+
+.Computers_Choice{
+    color:purple;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 35px;
+    border-radius: 50px;
+    font-weight: 600;
+}
+#start{
+    
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 50px;
+    font-size: 35px;
+    
+    
+}
+
+  .player_choice{
+    
+    
+    margin-top: 100px;
+    
+    font-size: 35px;
+    border-color: dimgrey;
+    border-radius: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 0px;
+    
+  }
+
+  .Result{
+ text-align: center;
+ font-size: 35px;
+ font-weight: 600px;
+ 
+
+  }
+  
+  @media  screen and (max-width: 600px){
+    * {
+        flex-direction: row;
+        align-items: center;
+    }
+
+}
